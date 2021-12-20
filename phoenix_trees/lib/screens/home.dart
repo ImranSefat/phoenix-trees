@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
             onPressed: () {
               authController.signOut();
             },
-            icon: Icon(Icons.cancel),
+            icon: const Icon(Icons.cancel),
           )
         ],
       ),
