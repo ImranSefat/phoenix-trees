@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:phoenix_trees/constants/firbase_auth_constants.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -6,7 +8,29 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(),
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              authController.signOut();
+            },
+            icon: Icon(Icons.cancel),
+          )
+        ],
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Welcome to Phoenix",
+              style: Get.textTheme.headline4!.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
