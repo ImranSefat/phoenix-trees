@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:phoenix_trees/constants/firbase_auth_constants.dart';
+import 'package:phoenix_trees/screens/home.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -39,15 +40,16 @@ class Login extends StatelessWidget {
                 color: Colors.white.withOpacity(0.5),
               ),
             ),
-            const Spacer(),
+            // const Spacer(),
             const SizedBox(
-              height: 16,
+              height: 70,
             ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  authController.signInWithGoogle();
+                  // authController.signInWithGoogle();
+                  Get.offAll(() => Home());
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.black,
