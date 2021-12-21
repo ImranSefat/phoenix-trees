@@ -1,6 +1,6 @@
-# phoenix-trees
+# Phoenix Trees
 
-## Screenshots of the completed project
+## Screenshots of the in progress project
 
 <p align="center"> 
 
